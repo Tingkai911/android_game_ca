@@ -126,61 +126,63 @@ public class PhotoTakingActivity extends AppCompatActivity
         String filename = photoFile.substring(photoFile.lastIndexOf("/") + 1);
         ImageView imgView;
         Button btn;
-        switch (requestCode) {
-            case REQ_TAKE_PHOTO_1:
-                imgView = findViewById(R.id.imgview1);
-                btn = findViewById(R.id.take_photo1);
-                if (imgView != null) {
-                    imgView.setImageBitmap(bitmap);
-                    listHolder[REQ_TAKE_PHOTO_1] = filename;
-                    btn.setText("Change Photo");
-                }
-                break;
-            case REQ_TAKE_PHOTO_2:
-                imgView = findViewById(R.id.imgview2);
-                btn = findViewById(R.id.take_photo2);
-                if (imgView != null) {
-                    imgView.setImageBitmap(bitmap);
-                    listHolder[REQ_TAKE_PHOTO_2] = filename;
-                    btn.setText("Change Photo");
-                }
-                break;
-            case REQ_TAKE_PHOTO_3:
-                imgView = findViewById(R.id.imgview3);
-                btn = findViewById(R.id.take_photo3);
-                if (imgView != null) {
-                    imgView.setImageBitmap(bitmap);
-                    listHolder[REQ_TAKE_PHOTO_3] = filename;
-                    btn.setText("Change Photo");
-                }
-                break;
-            case REQ_TAKE_PHOTO_4:
-                imgView = findViewById(R.id.imgview4);
-                btn = findViewById(R.id.take_photo4);
-                if (imgView != null) {
-                    imgView.setImageBitmap(bitmap);
-                    listHolder[REQ_TAKE_PHOTO_4] = filename;
-                    btn.setText("Change Photo");
-                }
-                break;
-            case REQ_TAKE_PHOTO_5:
-                imgView = findViewById(R.id.imgview5);
-                btn = findViewById(R.id.take_photo5);
-                if (imgView != null) {
-                    imgView.setImageBitmap(bitmap);
-                    listHolder[REQ_TAKE_PHOTO_5] = filename;
-                    btn.setText("Change Photo");
-                }
-                break;
-            case REQ_TAKE_PHOTO_6:
-                imgView = findViewById(R.id.imgview6);
-                btn = findViewById(R.id.take_photo6);
-                if (imgView != null) {
-                    imgView.setImageBitmap(bitmap);
-                    listHolder[REQ_TAKE_PHOTO_6] = filename;
-                    btn.setText("Change Photo");
-                }
-                break;
+        if(bitmap != null) {
+            switch (requestCode) {
+                case REQ_TAKE_PHOTO_1:
+                    imgView = findViewById(R.id.imgview1);
+                    btn = findViewById(R.id.take_photo1);
+                    if (imgView != null) {
+                        imgView.setImageBitmap(bitmap);
+                        listHolder[REQ_TAKE_PHOTO_1] = filename;
+                        btn.setText("Change Photo");
+                    }
+                    break;
+                case REQ_TAKE_PHOTO_2:
+                    imgView = findViewById(R.id.imgview2);
+                    btn = findViewById(R.id.take_photo2);
+                    if (imgView != null) {
+                        imgView.setImageBitmap(bitmap);
+                        listHolder[REQ_TAKE_PHOTO_2] = filename;
+                        btn.setText("Change Photo");
+                    }
+                    break;
+                case REQ_TAKE_PHOTO_3:
+                    imgView = findViewById(R.id.imgview3);
+                    btn = findViewById(R.id.take_photo3);
+                    if (imgView != null) {
+                        imgView.setImageBitmap(bitmap);
+                        listHolder[REQ_TAKE_PHOTO_3] = filename;
+                        btn.setText("Change Photo");
+                    }
+                    break;
+                case REQ_TAKE_PHOTO_4:
+                    imgView = findViewById(R.id.imgview4);
+                    btn = findViewById(R.id.take_photo4);
+                    if (imgView != null) {
+                        imgView.setImageBitmap(bitmap);
+                        listHolder[REQ_TAKE_PHOTO_4] = filename;
+                        btn.setText("Change Photo");
+                    }
+                    break;
+                case REQ_TAKE_PHOTO_5:
+                    imgView = findViewById(R.id.imgview5);
+                    btn = findViewById(R.id.take_photo5);
+                    if (imgView != null) {
+                        imgView.setImageBitmap(bitmap);
+                        listHolder[REQ_TAKE_PHOTO_5] = filename;
+                        btn.setText("Change Photo");
+                    }
+                    break;
+                case REQ_TAKE_PHOTO_6:
+                    imgView = findViewById(R.id.imgview6);
+                    btn = findViewById(R.id.take_photo6);
+                    if (imgView != null) {
+                        imgView.setImageBitmap(bitmap);
+                        listHolder[REQ_TAKE_PHOTO_6] = filename;
+                        btn.setText("Change Photo");
+                    }
+                    break;
+            }
         }
 
         if (!Arrays.stream(listHolder).anyMatch(""::equals)) {
